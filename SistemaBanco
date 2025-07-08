@@ -1,0 +1,275 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyND6vg5Re6ITX4/e+fQ/U6x",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/AmiltonSJr/Projects/blob/main/SistemaBanco\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "pjirXSe2yvD7"
+      },
+      "outputs": [],
+      "source": [
+        "nome = 'Amilton'\n",
+        "idade = 26\n",
+        "saldo = 200.00\n",
+        "cliente_ativo = True"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"nome\", nome)\n",
+        "print(\"idade\", idade)\n",
+        "print(\"saldo\", saldo)\n",
+        "print(\"cliente esta ativo? \", cliente_ativo)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JQEYESY-zEBf",
+        "outputId": "67905083-6809-4c52-f178-1607fea10e76"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "nome Amilton\n",
+            "idade 26\n",
+            "saldo 200.0\n",
+            "cliente esta ativo?  True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nome = str(input(\"digite seu nome: \"))\n",
+        "idade= int(input('digite sua idade: '))\n",
+        "saldo = float(input('Saldo bancário: '))\n",
+        "print(f'Olá {nome}, você tem {idade} anos e seu saldo é de :R${saldo:.2f}'.replace('.',',').replace('v','.'))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "J0h7ajMlzYBi",
+        "outputId": "d197c022-be7c-4090-bc2a-358945dee74c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "digite seu nome: Amilton\n",
+            "digite sua idade: 26\n",
+            "Saldo bancário: 1200.00\n",
+            "Olá Amilton, .ocê tem 26 anos e seu saldo é de :R$1200,00\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "saldo  = 1500.00\n",
+        "saque = 300.00\n",
+        "novo_saldo = saldo - saque\n",
+        "print(f'seu novo saldo é de:R$: {novo_saldo:.2f}'.replace('.',','))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yG62KU2ZzsKf",
+        "outputId": "7b40ca16-b114-4dff-dc39-7a569ec108a3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "seu novo saldo é de:R$: 1200,00\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(novo_saldo)\n",
+        "novo_saque = float(input(\"coloque o valor que deseja sacar:\"))\n",
+        "cartao_ativo = True\n",
+        "\n",
+        "if novo_saque <= novo_saldo and cartao_ativo:\n",
+        "  print('saque autorizado')\n",
+        "else:\n",
+        "  print('operação negada')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZkmF6TMx2Bul",
+        "outputId": "dee40deb-a2ee-4ac2-8479-fb0f5f40cf6a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1200.0\n",
+            "coloque o valor que deseja sacar:1300\n",
+            "operação negada\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "saldo_conta = float(input('coloque seu saldo: '))\n",
+        "valor_saque = float(input('coloque o valor do saque: '))\n",
+        "if valor_saque <= saldo_conta:\n",
+        "  print('saque autorizado')\n",
+        "else:\n",
+        "  print('saque negado')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A3iAo8Ti6eCr",
+        "outputId": "46947f84-f7cd-4400-d687-c9cd867772e2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "coloque seu saldo: 1200\n",
+            "coloque o valor do saque: 300\n",
+            "saque autorizado\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "saldo_conta_1 = float(input('coloque o valor do seu saldo: '))\n",
+        "valor_saque_1 = float(input('digite o valor do seu saque: '))\n",
+        "if valor_saque_1 > saldo_conta_1:\n",
+        "  print('Saldo insuficiente')\n",
+        "elif valor_saque_1 == saldo_conta_1:\n",
+        "  print('Saque total. Conta zerada')\n",
+        "elif saldo_conta_1 - valor_saque_1 <100:\n",
+        "  print('Saldo autorizado, mas saldo crítico!')\n",
+        "elif saldo_conta_1 - valor_saque_1 >= 100:\n",
+        "  print('Saque autorizado com saldo seguro')\n",
+        "else:\n",
+        "  print(\"Saque negado\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Yu_lgioA-KNO",
+        "outputId": "954d5367-dde5-4591-f6f7-6d7158514212"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "coloque o valor do seu saldo: 1200\n",
+            "digite o valor do seu saque: 118\n",
+            "Saque autorizado com saldo seguro\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "saldo_atual = 0\n",
+        "deposito = float(input('Coloque o valor do depósito: '))\n",
+        "saldo_atual = deposito\n",
+        "print(f'seu saldo é de : R${saldo_atual:.2f}'.replace('.',','))\n",
+        "\n",
+        "saque_conta = float(input('coloque o valor que deseja sacar:'))\n",
+        "if saque_conta <= saldo_atual:\n",
+        "  print(f'saque autorizado, seu saldo é de: R$:{saldo_atual - saque_conta:.2f}'.replace('.',','))\n",
+        "elif saque_conta == saldo_atual:\n",
+        "  print(f'saque autorizado, seu saldo é de: R$:{saldo_atual - saque_conta: .2f}'.replace('.',','))\n",
+        "elif saque_conta > saldo_atual:\n",
+        "  print('Saldo insuficiente')\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "b-8yNP2hBq3F",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5e724891-e458-45cb-8c13-0a00aadc52f5"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Coloque o valor do depósito: 1000\n",
+            "seu saldo é de : R$1000,00\n",
+            "coloque o valor que deseja sacar:154.98\n",
+            "saque autorizado, seu saldo é de: R$:845,02\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "Er9B1MftWQas"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
